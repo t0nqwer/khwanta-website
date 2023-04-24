@@ -16,6 +16,15 @@
   .nav-active {
     @apply bg-brand text-brand w-fit;
   }
+  .proname {
+    @apply relative tracking-[1px] cursor-pointer;
+  }
+  .proname::after {
+    @apply content-[''] bg-brand h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+  }
+  .proname:hover::after {
+    @apply w-[100%];
+  }
   ::-webkit-scrollbar {
     position: fixed;
     width: 6px;

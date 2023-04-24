@@ -12,7 +12,7 @@ const Pathname = () => {
 const Sidebar = () => {
   console.log(Pathname());
   return (
-    <div className="w-full bg-white h-full hidden md:flex flex-col text-base  justify-between px-10 select-none ">
+    <div className="w-full bg-white h-full hidden lg:flex flex-col text-base  justify-between px-10 select-none ">
       <div className=" pt-6 ">
         <Logo />
       </div>
