@@ -5,3 +5,6 @@ export { default as HeroKhwanta } from "./Homepage/HeroKhwanta";
 export { default as HeroSumamal } from "./Homepage/HeroSumamal";
 export { default as ProductList } from "./ProductList";
 export { default as TopBar } from "./TopBar";
+export { default as MobileMenu } from "./MobileMenu";
+export { default as ImageSlider } from "./ImageSlider";
+export { default as SizeTable } from "./Sizetable";

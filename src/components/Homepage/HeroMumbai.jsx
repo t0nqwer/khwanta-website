@@ -3,7 +3,7 @@ import MumBaiBG from "../../img/DSC_7101.jpg";
 import Logomumbai from "../../img/ktmumbai.png";
 const HeroMumbai = () => {
   return (
-    <div className=" h-full relative">
+    <div className=" w-full h-full relative">
       <div
         className="w-full  text-center h-full bg-cover md:bg-center flex justify-center items-center   bg-[center_left_60rem] "
         style={{ backgroundImage: `url(${MumBaiBG})` }}
@@ -16,11 +16,6 @@ const HeroMumbai = () => {
           />
         </section>
       </div>
-      {/* <img
-        src={MumBaiBG}
-        className="w-full h-full object-[center_left] object-cover"
-        alt="mumbai"
-      /> */}
     </div>
   );
 };

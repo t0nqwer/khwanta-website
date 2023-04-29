@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const Card = ({ product }) => {
+function Card({ product, CardWidth }) {
   const navigate = useNavigate();
+
+  console.log(product);
   const handleClick = () => {
     navigate(`/product/${product.product_id}`);
   };
   return (
-    <div className=" bg-neutral-100 cursor-pointer" onClick={handleClick}>
+    <li
+      id={product.product_id}
+      className={`w-[${CardWidth}px] xs:p-5 p-0 shrink-0`}
+      style={{ width: `${CardWidth}px` }}
+      onClick={handleClick}
+    >
       <div className="">
         <img
           src={product.Front_img}
-          className=" object-cover object-center h-[500px] w-[450px]"
+          className=" object-cover object-center h-[500px] w-full"
           alt={product.name}
         />
       </div>
@@ -32,8 +38,8 @@ const Card = ({ product }) => {
         }`}</h3>
         <h3 className=" text-sm text-neutral-700">{product.price}</h3>
       </div>
-    </div>
+    </li>
   );
-};
+}
 
 export default Card;

@@ -1,5 +1,6 @@
 import axios from "axios";
 export default axios.create({
-  // baseURL: "https://khwanta-zfn2h52c7a-as.a.run.app",
-  baseURL: "http://localhost:7070",
+  // baseURL: "https://khwantaqwe-zfn2h52c7a-uc.a.run.app",
+  baseURL: "https://khwanta-api2546.com",
+  // baseURL: "http://localhost:7070",
 });

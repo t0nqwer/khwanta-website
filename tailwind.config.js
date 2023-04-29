@@ -10,6 +10,9 @@ module.exports = {
         brand: "#B03737",
         secound: "#e0ddd5",
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],
