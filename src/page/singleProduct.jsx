@@ -42,7 +42,7 @@ const SingleProduct = () => {
         {Images.map((image) => {
           if (window.innerWidth >= 1024)
             return (
-              <div className="  w-full  snap-center border-0  relative">
+              <div className="  w-full  border-0  relative">
                 <img src={image} alt="" className="object-cover" />
               </div>
             );
@@ -51,7 +51,10 @@ const SingleProduct = () => {
       </div>
       <div className="xl:w-2/3  lg:w-1/2 sticky top-0 shrink-0 bg-white right-0 lg:h-screen flex justify-center items-center ">
         <div className="lg:w-[23rem] w-2/3 mx-auto lg:py-0 py-10 ">
-          <h1 className="text-xl font-semibold ">
+          <h1 className="text-base text-neutral-500 w-full text-right ">
+            {data?.code}
+          </h1>
+          <h1 className="text-xl font-semibold mt-2 ">
             {data?.design?.Design_Name}
           </h1>
           <h3 className=" text-sm text-neutral-500 mt-1">
@@ -66,13 +69,16 @@ const SingleProduct = () => {
                   : ""
               }`}
           </h3>
-          <h2 className="text-lg font-semibold ">฿ {data?.price}</h2>
+          <h2 className="text-base mt-1 font-semibold ">฿ {data?.price}</h2>
           <div className="border-t border-black mt-5 border-1"></div>
           <h2 className="text-lg font-semibold text-center mt-3 "> ขนาด</h2>
           <div className="w-full mt-2 flex justify-center">
             <SizeTable data={data} SizeList={SizeList} Sizedata={Sizedata} />
           </div>
-          <button className="w-full bg-brand text-xl p-4 mt-5 rounded-full">
+          <button
+            onClick={() => window.open("https://lin.ee/M3rLQI1", "_blank")}
+            className="w-full  bg-brand text-white text-xl p-4 mt-5 rounded-full hover:bg-white hover:border border-brand hover:text-brand"
+          >
             เพิ่มเพื่อนเลย
           </button>
           <h2 className="text-lg mt-5">

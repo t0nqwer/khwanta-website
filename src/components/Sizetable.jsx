@@ -8,7 +8,7 @@ const Sizetable = ({ data, SizeList, Sizedata }) => {
           {SizeList?.map((e) => {
             return (
               <th
-                className="text-lg  font-normal text-secondary-600 divide-y divide-dashed "
+                className="text-base font-semibold   text-secondary-600 divide-y divide-dashed "
                 id={e?.Size_ID}
                 key={e?.Size_ID ? e?.Size_ID : "lo"}
               >
@@ -23,7 +23,7 @@ const Sizetable = ({ data, SizeList, Sizedata }) => {
           <tr key={e.Detail.Size_De_Name}>
             <td
               key={e.Detail.Size_De_ID}
-              className="text-sm text-secondary-600 w-24 text-center"
+              className="text-sm font-semibold text-secondary-600 w-24 text-center"
             >
               {e.Detail.Size_De_Name}
             </td>
@@ -33,7 +33,7 @@ const Sizetable = ({ data, SizeList, Sizedata }) => {
                   return (
                     <td
                       key={g.Info}
-                      className="text-lg text-secondary-600 w-24 text-center"
+                      className=" text-base text-secondary-600 w-24 text-center"
                     >
                       {g.Info}
                     </td>

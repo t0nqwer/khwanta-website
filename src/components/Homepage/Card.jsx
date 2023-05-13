@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 function Card({ product, CardWidth }) {
   const navigate = useNavigate();
 
-  console.log(product);
   const handleClick = () => {
     navigate(`/product/${product.product_id}`);
   };
   return (
     <li
+      key={product.product_id}
       id={product.product_id}
       className={`w-[${CardWidth}px] xs:p-5 p-0 shrink-0`}
       style={{ width: `${CardWidth}px` }}

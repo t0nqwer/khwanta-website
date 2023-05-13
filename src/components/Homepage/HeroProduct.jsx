@@ -24,7 +24,7 @@ const HeroProduct = () => {
     if (windowwidth < 1200) setShow(2);
     if (windowwidth < 700) setShow(1);
     setSliderWidth(card.length * cardWidth);
-    console.log(SlidercontainerWidth, card.length);
+
     setCardWidth(SlidercontainerWidth / show);
   }, [heros]);
   const prev = () => {
@@ -67,7 +67,11 @@ const HeroProduct = () => {
             style={{ width: `${SliderWidth}px`, marginLeft: `${marginLeft}px` }}
           >
             {heros.map((product) => (
-              <Card product={product} CardWidth={CardWidth} />
+              <Card
+                key={product.product_id}
+                product={product}
+                CardWidth={CardWidth}
+              />
             ))}
           </ul>
         </div>

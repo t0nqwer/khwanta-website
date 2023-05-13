@@ -13,7 +13,7 @@ function getWindowDimensions() {
 const App = () => {
   const [width, setWidth] = useState(1000);
   const wi = window.innerWidth;
-  console.log(wi);
+
   useEffect(() => {
     function handleResize() {
       setWidth(getWindowDimensions());
@@ -38,7 +38,7 @@ const App = () => {
             </div> */}
           <div className=" lg:pl-64 pl-0 w-full overflow-visible">
             <Routes>
-              <Route path="/" element={<Homepage />} />
+              <Route exact path="/" element={<Homepage />} />
               <Route path="shop" element={<Shop />} />
               <Route path="story" element={<Story />} />
               <Route path="history" element={<History />} />
